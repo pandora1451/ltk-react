@@ -8,6 +8,9 @@ import Login from '../containers/Login'
 import User from '../containers/User'
 import Search from '../containers/Search'
 import Detail from '../containers/Detail'
+import Message from '../containers/Message'
+import Cart from '../containers/Cart'
+import Category from '../containers/Category'
 import NotFound from '../containers/404'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
@@ -24,6 +27,9 @@ class RouterMap extends React.Component {
                     <Route path='/User' component={User}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
+                    <Route path='/message' component={Message}/>
+                    <Route path='/cart' component={Cart}/>
+                    <Route path='/category' component={Category}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>
