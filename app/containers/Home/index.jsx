@@ -12,6 +12,7 @@ class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {date: new Date()};
     }
     render() {
         return (
