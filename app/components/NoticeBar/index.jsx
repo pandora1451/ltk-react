@@ -9,7 +9,7 @@ class NoticeBar extends React.Component {
     }
     render() {
         return (
-            <section className="notice-bar">
+            <section className="notice-bar clear-fix">
             	<div className="notice-sign">
             		<span>NOTICE</span>
             		<span>通知</span>

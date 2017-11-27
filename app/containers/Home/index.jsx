@@ -7,6 +7,7 @@ import Category from '../../components/Category'
 import PageFooter from '../../components/PageFooter'
 import HomeTop from '../../components/HomeTop'
 import NoticeBar from '../../components/NoticeBar'
+import ColumnGrid from '../../components/ColumnGrid'
 import Ad from './subpage/Ad'
 import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
@@ -23,6 +24,7 @@ class Home extends React.Component {
                 <HomeHeader cityName={this.props.userinfo.cityName}/>
                 <AdSwiper/>
                 <NoticeBar/>
+                <ColumnGrid/>
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
                 <PageFooter/>
