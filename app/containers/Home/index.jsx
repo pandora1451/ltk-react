@@ -5,7 +5,10 @@ import { connect } from 'react-redux'
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
 import PageFooter from '../../components/PageFooter'
+import HomeTop from '../../components/HomeTop'
+import NoticeBar from '../../components/NoticeBar'
 import Ad from './subpage/Ad'
+import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
 
 class Home extends React.Component {
@@ -15,10 +18,11 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="app">
+                <HomeTop/>
                 <HomeHeader cityName={this.props.userinfo.cityName}/>
-                <Category/>
-                <div style={{height: '15px'}}>{/* 分割线 */}</div>
+                <AdSwiper/>
+                <NoticeBar/>
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
                 <PageFooter/>
