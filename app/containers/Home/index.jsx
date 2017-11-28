@@ -8,10 +8,11 @@ import PageFooter from '../../components/PageFooter'
 import HomeTop from '../../components/HomeTop'
 import NoticeBar from '../../components/NoticeBar'
 import ColumnGrid from '../../components/ColumnGrid'
+import FlashSale from '../../components/FlashSale'
 import Ad from './subpage/Ad'
 import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
-
+import AdBanner from './subpage/AdBanner'
 class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -25,6 +26,8 @@ class Home extends React.Component {
                 <AdSwiper/>
                 <NoticeBar/>
                 <ColumnGrid/>
+                <FlashSale/>
+                <AdBanner/>
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
                 <PageFooter/>

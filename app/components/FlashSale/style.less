@@ -1,0 +1,112 @@
+.flash-sale{
+	margin: 0.5rem auto;
+	padding-bottom: 0.5rem;
+	.flash-sale-top{
+		height: 1.7rem;
+		line-height: 1.7rem;
+		font-size: 0.75rem;
+		color: #666666;
+		.left{
+			padding-left: 0.8rem;
+			float: left;
+			margin-right: 0.5rem;
+			.ico-clock{
+				width: 1rem;
+				height: 1rem;
+				margin-right: 0.525rem;
+				vertical-align: text-top;
+				display: inline-block;
+				background: url("../../static/images/icon/ico_home_discount.png") no-repeat 50% 50%;
+				background-size:70%;
+			}			
+		}
+		.right{
+			color: #999999;
+			float: left;
+			div{
+				display: inline-block;
+			}
+			.times{
+				color: #333333;
+				display: inline-block;
+				margin: auto 2px;
+				span{
+					width: 0.85rem;
+					height: 0.85rem;
+					line-height: 0.85rem;
+					text-align: center;
+					display: inline-block;
+					vertical-align: text-bottom;
+					font-size: 0.5rem;
+					background: url("../../static/images/icon/ico_home_second.png") no-repeat;
+					background-size:100%;
+				}
+			}
+		}
+		.more{
+			float: right;
+			margin-right: 0.8rem;
+			color: #999999;
+			.ico-more{
+				width: 0.3rem;
+				height: 0.5rem;
+				margin-left: 13/40rem;
+				display: inline-block;
+				background: url("../../static/images/icon/ico_home_more.png") no-repeat;
+				background-size:100%;
+			}
+		}
+	}
+	.gray-line{
+		border-bottom: 1px solid #E6E6E6;
+		margin:auto 0.8rem;
+	}
+	.flash-sale-content{
+		display: flex;
+		justify-content:space-around;
+		margin-top: 30/40rem;
+		img{
+			width: 190/40rem;
+			height: 190/40rem;
+		}
+		.goods{
+			width: 33%;
+			text-align: center;
+			flex-grow:0;
+			font-size: 26/40rem;
+			.goods-name-container{
+				margin:0.5rem auto; 
+				.goods-name{
+					width: 100%;
+					color: #333333;
+					overflow: hidden; 
+					text-overflow: ellipsis; 
+					display: -webkit-box; 
+					display: box; 
+					-webkit-box-orient: vertical; 
+					-webkit-line-clamp: 1;
+				}
+			}
+			.sign-container{
+				height: 1rem;
+				line-height: 1rem;
+				.sign{
+					width: 60/40rem;
+					height:26/40rem;
+					line-height: 26/40rem;
+					font-size: 18/40rem;
+					color: #ffffff;
+					background-color: #FFB0B7;
+					padding: 1px 2px;
+					border-radius: 4px;
+					margin-right: 5px;
+					vertical-align: text-top;
+				}
+				.goods-price{
+					color: #FFB0B7;
+					font-size: 32/40rem;
+				}
+			}
+		}
+	}
+}
