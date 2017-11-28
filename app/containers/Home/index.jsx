@@ -16,6 +16,7 @@ import List from './subpage/List'
 import AdBanner from './subpage/AdBanner'
 import Category01 from './subpage/Category01'
 import Category02 from './subpage/Category02'
+import ArticleGrid from './subpage/ArticleGrid'
 class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -33,8 +34,8 @@ class Home extends React.Component {
                 <AdBanner/>
                 <Sepecial/>
                 <Category01/>
+                <ArticleGrid/>
                 <Category02/>
-
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
                 <PageFooter/>
