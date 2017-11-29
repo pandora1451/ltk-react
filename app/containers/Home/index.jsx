@@ -10,6 +10,8 @@ import NoticeBar from '../../components/NoticeBar'
 import ColumnGrid from '../../components/ColumnGrid'
 import FlashSale from '../../components/FlashSale'
 import Sepecial from '../../components/Sepecial'
+import RecommendBox from '../../components/RecommendBox'
+import RefreshAndSearchBar from '../../components/RefreshAndSearchBar'
 import Ad from './subpage/Ad'
 import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
@@ -36,9 +38,12 @@ class Home extends React.Component {
                 <Category01/>
                 <ArticleGrid/>
                 <Category02/>
-                <Ad/>
+                <RefreshAndSearchBar/>
+                <RecommendBox/>
+                {/*<Ad/>*/}
                 <List cityName={this.props.userinfo.cityName}/>
                 <PageFooter/>
+                <div style={{height: '2.5rem'}}></div>
             </div>
         )
     }
