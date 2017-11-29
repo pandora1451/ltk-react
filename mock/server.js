@@ -123,7 +123,7 @@ router.post('/api/submitComment', function *(next) {
 
 
 //首页加载更多推荐
-var getMoreRecommend = require('./home/list.js')
+var getMoreRecommend = require('./home/recommend-list.js')
 router.get('/api/recommend/:page', function *(next) {
 
     console.log('执行了更多推荐')

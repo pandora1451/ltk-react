@@ -41,7 +41,7 @@ class Home extends React.Component {
                 <RefreshAndSearchBar/>
                 <RecommendBox/>
                 {/*<Ad/>*/}
-                <List cityName={this.props.userinfo.cityName}/>
+                {/*<List cityName={this.props.userinfo.cityName}/>*/}
                 <PageFooter/>
                 <div style={{height: '2.5rem'}}></div>
             </div>

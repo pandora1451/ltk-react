@@ -9,3 +9,8 @@ export function getListData(city, page) {
     const result = get('/api/homelist/' + encodeURIComponent(city) + '/' + page)
     return result
 }
+
+export function getRecommendData(page) {
+    const result = get('/api/recommend/' + page)
+    return result
+}
