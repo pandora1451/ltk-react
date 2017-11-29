@@ -120,6 +120,17 @@ router.post('/api/submitComment', function *(next) {
     }
 })
 
+
+
+//首页加载更多推荐
+var getMoreRecommend = require('./home/list.js')
+router.get('/api/recommend/:page', function *(next) {
+
+    console.log('执行了更多推荐')
+
+    this.body = getMoreRecommend
+});
+
 // 开始服务并生成路由
 app.use(router.routes())
    .use(router.allowedMethods());
