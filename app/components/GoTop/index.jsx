@@ -13,7 +13,8 @@ class GoTop extends React.Component {
     render() {
         return (
         	<div>
-        	{	this.state.isShow
+        	{	
+        		this.state.isShow
 	            ?<div className="go-top" onClick={this.click.bind(this)}></div>
 	            :''
         	}
@@ -35,9 +36,6 @@ class GoTop extends React.Component {
             }
         }
         window.addEventListener('scroll', function () {
-            if (this.props.isLoadingMore) {
-                return
-            }
             if (timeoutId) {
                 clearTimeout(timeoutId)
             }
