@@ -39,8 +39,8 @@ class Home extends React.Component {
                 <ArticleGrid/>
                 <Category02/>
                 <RefreshAndSearchBar/>
-                <RecommendBox/>
                 {/*<Ad/>*/}
+                {<RecommendBox/>}
                 {/*<List cityName={this.props.userinfo.cityName}/>*/}
                 <PageFooter/>
                 <div style={{height: '2.5rem'}}></div>

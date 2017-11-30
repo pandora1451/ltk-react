@@ -126,7 +126,8 @@ router.post('/api/submitComment', function *(next) {
 var getMoreRecommend = require('./home/recommend-list.js')
 router.get('/api/recommend/:page', function *(next) {
 
-    console.log('执行了更多推荐')
+    var date = new Date();
+    console.log('执行了更多推荐。时间：'+date)
 
     this.body = getMoreRecommend
 });
