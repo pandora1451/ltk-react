@@ -12,6 +12,7 @@ import FlashSale from '../../components/FlashSale'
 import Sepecial from '../../components/Sepecial'
 import RecommendBox from '../../components/RecommendBox'
 import RefreshAndSearchBar from '../../components/RefreshAndSearchBar'
+import GoTop from '../../components/GoTop'
 import Ad from './subpage/Ad'
 import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
@@ -43,6 +44,7 @@ class Home extends React.Component {
                 {<RecommendBox/>}
                 {/*<List cityName={this.props.userinfo.cityName}/>*/}
                 <PageFooter/>
+                <GoTop/>
                 <div style={{height: '2.5rem'}}></div>
             </div>
         )

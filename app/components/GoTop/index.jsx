@@ -6,13 +6,43 @@ class GoTop extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+        	isShow:false
+        }
     }
     render() {
         return (
-            <div className="go-top">
-            	
-            </div>
+        	<div>
+        	{	this.state.isShow
+	            ?<div className="go-top" onClick={this.click.bind(this)}></div>
+	            :''
+        	}
+        	</div>
         )
+    }
+    click(e){
+    	document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+    componentDidMount() {
+        // 使用滚动时自动加载更多
+        let timeoutId
+        function callback() {
+            const top = document.documentElement.scrollTop;
+            if (top > 500) {
+            	this.setState({isShow: true});
+            }else{
+            	this.setState({isShow:false});
+            }
+        }
+        window.addEventListener('scroll', function () {
+            if (this.props.isLoadingMore) {
+                return
+            }
+            if (timeoutId) {
+                clearTimeout(timeoutId)
+            }
+            timeoutId = setTimeout(callback.bind(this), 50)
+        }.bind(this), false);
     }
 }
 
