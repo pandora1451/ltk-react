@@ -12,36 +12,39 @@ class GoTop extends React.Component {
     }
     render() {
         return (
-        	<div>
+        	<div ref="myRef">
         	{	
         		this.state.isShow
-	            ?<div className="go-top" onClick={this.click.bind(this)}></div>
-	            :''
+	            ?<div className="go-top"  onClick={this.click.bind(this)}></div>
+	            :<div></div>
         	}
         	</div>
         )
     }
     click(e){
-    	document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }
+    		document.body.scrollTop = document.documentElement.scrollTop = 0;
+    };
     componentDidMount() {
         // 使用滚动时自动加载更多
         let timeoutId
         function callback() {
-            const top = document.documentElement.scrollTop;
-            if (top > 500) {
-            	this.setState({isShow: true});
-            }else{
-            	this.setState({isShow:false});
-            }
+        	var top = document.documentElement.scrollTop;
+            if (this.refs.myRef) {
+        		if (top > 500) {
+            		this.setState({isShow: true});
+	            }else{
+	            	this.setState({isShow:false});
+	            }
+        	}
         }
         window.addEventListener('scroll', function () {
-            if (timeoutId) {
+        	if (timeoutId) {
                 clearTimeout(timeoutId)
             }
             timeoutId = setTimeout(callback.bind(this), 50)
         }.bind(this), false);
     }
+
 }
 
 export default GoTop

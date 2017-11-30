@@ -5,6 +5,7 @@ import { hashHistory } from 'react-router'
 
 import Header from '../../components/Header'
 import UserInfo from '../../components/UserInfo'
+import PageFooter from '../../components/PageFooter'
 import OrderList from './subpage/OrderList'
 
 class User extends React.Component {
@@ -19,6 +20,7 @@ class User extends React.Component {
                 <Header title="用户主页" backRouter="/home"/>
                 <UserInfo username={userinfo.username} city={userinfo.cityName}/>
                 <OrderList username={userinfo.username}/>
+                <PageFooter/>
             </div>
         )
     }
