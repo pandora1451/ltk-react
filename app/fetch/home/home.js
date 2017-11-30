@@ -14,3 +14,8 @@ export function getRecommendData(page) {
     const result = get('/api/recommend/' + page)
     return result
 }
+
+export function getNoticeList(page) {
+    const result = get('/api/notice')
+    return result
+}

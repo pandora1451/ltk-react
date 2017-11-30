@@ -40,7 +40,7 @@ class Home extends React.Component {
                 <ArticleGrid/>
                 <Category02/>
                 <RefreshAndSearchBar/>
-                {/*<Ad/>*/}
+                {<Ad/>}
                 {<RecommendBox/>}
                 {/*<List cityName={this.props.userinfo.cityName}/>*/}
                 <PageFooter/>
