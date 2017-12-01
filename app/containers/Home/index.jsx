@@ -29,7 +29,7 @@ class Home extends React.Component {
         return (
             <div className="app">
                 <HomeTop/>
-                <HomeHeader cityName={this.props.userinfo.cityName}/>
+                {/*<HomeHeader cityName={this.props.userinfo.cityName}/>*/}
                 <AdSwiper/>
                 <NoticeBar/>
                 <ColumnGrid/>
@@ -40,8 +40,8 @@ class Home extends React.Component {
                 <ArticleGrid/>
                 <Category02/>
                 <RefreshAndSearchBar/>
-                {<Ad/>}
-                {<RecommendBox/>}
+                <Ad/>
+                <RecommendBox/>
                 {/*<List cityName={this.props.userinfo.cityName}/>*/}
                 <PageFooter/>
                 <GoTop/>

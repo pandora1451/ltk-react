@@ -11,6 +11,7 @@ import Detail from '../containers/Detail'
 import Message from '../containers/Message'
 import Cart from '../containers/Cart'
 import Category from '../containers/Category'
+import Recommend from '../containers/Recommend'
 import NotFound from '../containers/404'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
@@ -29,6 +30,7 @@ class RouterMap extends React.Component {
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/message' component={Message}/>
                     <Route path='/cart' component={Cart}/>
+                    <Route path='/recommend' component={Recommend}/>
                     <Route path='/category' component={Category}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
