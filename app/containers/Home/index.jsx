@@ -13,6 +13,7 @@ import Sepecial from '../../components/Sepecial'
 import RecommendBox from '../../components/RecommendBox'
 import RefreshAndSearchBar from '../../components/RefreshAndSearchBar'
 import GoTop from '../../components/GoTop'
+import SearchLayer from '../../components/SearchLayer'
 import Ad from './subpage/Ad'
 import AdSwiper from './subpage/AdSwiper'
 import List from './subpage/List'
@@ -29,8 +30,9 @@ class Home extends React.Component {
         return (
             <div className="app">
                 <HomeTop/>
-                {/*<HomeHeader cityName={this.props.userinfo.cityName}/>*/}
+                <HomeHeader cityName={this.props.userinfo.cityName}/>
                 <AdSwiper/>
+                <SearchLayer/>
                 <NoticeBar/>
                 <ColumnGrid/>
                 <FlashSale/>
