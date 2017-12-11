@@ -8,7 +8,6 @@ class HomeTop extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-        
     }
     clickHandel(){
         this.props.searchClick(true);
@@ -19,7 +18,7 @@ class HomeTop extends React.Component {
             	<div className="home-top-left " onClick={this.clickHandel.bind(this)} >
             		<img src={require('../../static/images/icon/search01.png')}/>
             	</div>
-                <Link to='/message'>
+                <Link to='/message/main'>
             	<div className="home-top-right">
             		<img src={require('../../static/images/icon/message01.png')}/>
             	</div>

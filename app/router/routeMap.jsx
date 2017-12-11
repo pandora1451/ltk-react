@@ -28,7 +28,7 @@ class RouterMap extends React.Component {
                     <Route path='/User' component={User}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
-                    <Route path='/message' component={Message}/>
+                    <Route path='/message/:name' component={Message}/>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/recommend' component={Recommend}/>
                     <Route path='/category' component={Category}/>

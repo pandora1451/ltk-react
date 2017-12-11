@@ -6,7 +6,6 @@ class SearchLayer extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-
     }
 
     render() {
@@ -39,7 +38,7 @@ class SearchLayer extends React.Component {
             		</div>
             	</div>
             </section>
-            :<h1>SearchLayerHide</h1>
+            :null
         )
     }
     clickHandle(){
