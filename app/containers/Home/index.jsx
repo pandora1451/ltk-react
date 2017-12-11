@@ -25,14 +25,17 @@ class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            searchShow : false
+        }
     }
     render() {
         return (
             <div className="app">
-                <HomeTop/>
+                <HomeTop searchClick={msg =>this.searchHandle(msg)}/>
                 <HomeHeader cityName={this.props.userinfo.cityName}/>
                 <AdSwiper/>
-                <SearchLayer/>
+                <SearchLayer searchShowState={this.state.searchShow} searchClick={msg =>this.searchHandle(msg)}/>
                 <NoticeBar/>
                 <ColumnGrid/>
                 <FlashSale/>
@@ -50,6 +53,9 @@ class Home extends React.Component {
                 <div style={{height: '2.5rem'}}></div>
             </div>
         )
+    }
+    searchHandle(msg){
+        this.setState({searchShow:msg})
     }
 }
 

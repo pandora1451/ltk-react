@@ -6,13 +6,12 @@ class SearchLayer extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-        this.state = {
-            searchShow : true
-        }
+
     }
+
     render() {
         return (
-        	this.state.searchShow
+        	this.props.searchShowState
             ?<section className="searchLayer">
             	<div className="search-header">
             		<div className="search-header-left">
@@ -20,7 +19,7 @@ class SearchLayer extends React.Component {
 	            			<i className="icon-search"></i><input type="text" placeholder="搜索"/>
             			</div>
             		</div>
-            		<div className="search-header-right"><span>取消</span></div>
+            		<div className="search-header-right" onClick={this.clickHandle.bind(this)}><span>取消</span></div>
             	</div>
             	<div className="search-hotSearch">
             		<div className="title">热搜</div>
@@ -42,6 +41,9 @@ class SearchLayer extends React.Component {
             </section>
             :<h1>SearchLayerHide</h1>
         )
+    }
+    clickHandle(){
+    	this.props.searchClick(false)
     }
 }
 
