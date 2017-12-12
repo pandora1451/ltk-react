@@ -9,6 +9,7 @@ import User from '../containers/User'
 import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import Message from '../containers/Message'
+import MessageType from '../containers/MessageType'
 import Cart from '../containers/Cart'
 import Category from '../containers/Category'
 import Recommend from '../containers/Recommend'
@@ -28,7 +29,8 @@ class RouterMap extends React.Component {
                     <Route path='/User' component={User}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
-                    <Route path='/message/:name' component={Message}/>
+                    <Route path='/message/main' component={Message}/>
+                    <Route path='/message/main/:name' component={MessageType}/>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/recommend' component={Recommend}/>
                     <Route path='/category' component={Category}/>

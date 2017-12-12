@@ -9,8 +9,25 @@ class HeaderZero extends React.Component {
     }
     render() {
         return (
-            <div className="headerZero"></div>
+            <section className="headerZero">
+            	<span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                    <i className="back-icon" ></i>
+                </span>
+                <span className="share-icon-container">
+                    <i className="share-icon"></i>
+                </span>
+                <div className="title">{this.props.title}</div>
+                <div className="gray-line"></div>
+            </section>
         )
+    }
+    clickHandle() {
+        const backRouter = this.props.backRouter
+        if (backRouter) {
+            hashHistory.push(backRouter)
+        } else {
+            window.history.back()
+        }
     }
 }
 

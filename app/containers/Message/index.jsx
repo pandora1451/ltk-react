@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { hashHistory } from 'react-router'
+import {Link,hashHistory } from 'react-router'
 
 import './style.less'
 class Message extends React.Component {
@@ -22,34 +22,48 @@ class Message extends React.Component {
 	                <div className="gray-line"></div>
 	            </div>
 	            <div className="body-top">
-	            	<div>
-	            		<i className="ico-sts"></i><span>系统消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/sys">
+		            	<div>
+		            		<i className="ico-sts"></i><span>系统消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            	<div className="gray-line"></div>
-	            	<div>
-	            		<i className="ico-wl"></i><span>物流消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/shipping">
+		            	<div>
+		            		<i className="ico-wl"></i><span>物流消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            </div>
 	            <div className="body-bottom">
-	            	<div>
-	            		<i className="ico-hb"></i><span>伙伴消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/friends">
+		            	<div>
+		            		<i className="ico-hb"></i><span>伙伴消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            	<div className="gray-line"></div>
-	            	<div>
-	            		<i className="ico-jl"></i><span>奖励消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/reward">
+		            	<div>
+		            		<i className="ico-jl"></i><span>奖励消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            	<div className="gray-line"></div>
-	            	<div>
-	            		<i className="ico-yhq"></i><span>优惠券信息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/bonus">
+		            	<div>
+		            		<i className="ico-yhq"></i><span>优惠券信息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            	<div className="gray-line"></div>
-	            	<div>
-	            		<i className="ico-jf"></i><span>积分消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/rankpoints">
+		            	<div>
+		            		<i className="ico-jf"></i><span>积分消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            	<div className="gray-line"></div>
-	            	<div>
-	            		<i className="ico-xy"></i><span>心愿单消息</span><i className="ico-right"></i><span className="num">20</span>
-	            	</div>
+	            	<Link to="/message/main/favorite">
+		            	<div>
+		            		<i className="ico-xy"></i><span>心愿单消息</span><i className="ico-right"></i><span className="num">20</span>
+		            	</div>
+	            	</Link>
 	            </div>
         	</section>
         )
