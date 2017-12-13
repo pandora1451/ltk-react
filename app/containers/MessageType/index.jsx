@@ -9,10 +9,8 @@ class MessageType extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
-    	let url = location.href;
+    	let url = this.props.params.name;
     	var t = null;
-    	url = url.split("main/")[1].split("?")[0];
-    	console.log(url);
     	switch(url){
     		case 'sys':
     		t = "系统消息";

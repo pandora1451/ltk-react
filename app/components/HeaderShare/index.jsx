@@ -5,14 +5,14 @@ import { hashHistory } from 'react-router'
 import ShareIcon from '../ShareIcon'
 import './style.less'
 
-class Header01 extends React.Component {
+class HeaderShare extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
         return (
-            <div className="header01">
+            <div className="header-share">
                 <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
                     <i className="back-icon" ></i>
                 </span>
@@ -32,4 +32,4 @@ class Header01 extends React.Component {
     }
 }
 
-export default Header01
+export default HeaderShare

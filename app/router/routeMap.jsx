@@ -14,6 +14,7 @@ import Cart from '../containers/Cart'
 import Category from '../containers/Category'
 import Recommend from '../containers/Recommend'
 import NotFound from '../containers/404'
+import Column from '../containers/Column'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
 // 参见 https://github.com/reactjs/react-router/tree/master/examples/huge-apps
@@ -34,6 +35,7 @@ class RouterMap extends React.Component {
                     <Route path='/cart' component={Cart}/>
                     <Route path='/recommend' component={Recommend}/>
                     <Route path='/category' component={Category}/>
+                    <Route path='/column/:name' component={Column}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

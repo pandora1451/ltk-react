@@ -2,8 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ReactSwipe from 'react-swipe'
 
-import Header01 from '../../components/Header01'
-import HeaderZero from '../../components/HeaderZero'
+import HeaderShare from '../../components/HeaderShare'
 import './style.less'
 
 class Recommend extends React.Component {
@@ -24,7 +23,7 @@ class Recommend extends React.Component {
         }
         return (
         	<section className="recommend-page" >
-        		<Header01 title="口红推荐"/>
+        		<HeaderShare title="口红推荐"/>
             	<section className="notice-container">
             		<span className="notice-icon"></span>
             		<span className="notice-content">推荐商品每天10点更新</span>
