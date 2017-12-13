@@ -25,7 +25,6 @@ class Recommend extends React.Component {
         return (
         	<section className="recommend-page" >
         		<Header01 title="口红推荐"/>
-        		<HeaderZero/>
             	<section className="notice-container">
             		<span className="notice-icon"></span>
             		<span className="notice-content">推荐商品每天10点更新</span>

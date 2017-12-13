@@ -1,19 +1,19 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import PageFooter from '../../components/PageFooter'
 
-class Category extends React.Component {
+import './style.less'
+class ShareIcon extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
         return (
-            <section>
-            	<h1>Category</h1>
-            </section>
+            <span className="share-icon-container">
+                    <i className="share-icon"></i>
+            </span>
         )
     }
 }
 
-export default Category
+export default ShareIcon
