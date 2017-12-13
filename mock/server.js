@@ -132,6 +132,16 @@ router.get('/api/recommend/:page', function *(next) {
     this.body = getMoreRecommend
 });
 
+//口红推荐页面商品列表
+var getMoreRecommendPageDage = require('./column/recommend-goods-list.js')
+router.get('/api/recommend-goods-list/:page',function *(next) {
+
+    var date = new Date();
+    console.log('执行了获取口红推荐页面商品信息。时间：'+date)
+
+    this.body = getMoreRecommendPageDage
+})
+
 // 开始服务并生成路由
 app.use(router.routes())
    .use(router.allowedMethods());

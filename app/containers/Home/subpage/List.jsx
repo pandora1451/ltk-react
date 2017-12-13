@@ -21,7 +21,7 @@ class List extends React.Component {
     render() {
         return (
             <div>
-                <h2 className="home-list-title">猜你喜欢{this.state.data.length}</h2>
+                <h2 className="home-list-title">猜你喜欢</h2>
                 {
                     this.state.data.length
                     ? <ListCompoent data={this.state.data}/>

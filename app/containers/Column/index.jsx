@@ -42,6 +42,9 @@ class Column extends React.Component {
         				</span>
         			</div>
         		</div>
+        		<div className="goods-box">
+        			
+        		</div>
         	</section>
         )
     }
