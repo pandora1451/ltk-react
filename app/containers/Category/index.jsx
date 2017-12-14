@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import PageFooter from '../../components/PageFooter'
+import { Link, hashHistory } from 'react-router'
 
 import CatHeader from './subpage/cat-header'
 
@@ -23,22 +24,53 @@ class Category extends React.Component {
                     </div>
                     <div className="list-box">
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai01.png')} />
+                            </Link>
                         </div>
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai02.png')} />
+                            </Link>
                         </div>
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai03.png')} />
+                            </Link>
                         </div>
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai01.png')} />
+                            </Link>
                         </div>
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai02.png')} />
+                            </Link>
                         </div>
                         <div className="img-box">
+                            <Link to='/brand/133'>
                             <img src={require('../../static/images/logo/hot-pinpai03.png')} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="love-pets">
+                    <div className="title">
+                        <span>爱宠</span>
+                    </div>
+                    <div className="list-box">
+                        <div className="img-box">
+                            <img src={require('../../static/images/logo/aichong01.png')} />
+                        </div>
+                        <div className="img-box">
+                            <img src={require('../../static/images/logo/aichong02.png')} />
+                        </div>
+                        <div className="img-box">
+                            <img src={require('../../static/images/logo/aichong03.png')} />
+                        </div>
+                        <div className="img-box">
+                            <img src={require('../../static/images/logo/aichong04.png')} />
                         </div>
                     </div>
                 </div>

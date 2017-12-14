@@ -15,6 +15,7 @@ import Category from '../containers/Category'
 import Recommend from '../containers/Recommend'
 import NotFound from '../containers/404'
 import Column from '../containers/Column'
+import Brand from '../containers/Brand'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
 // 参见 https://github.com/reactjs/react-router/tree/master/examples/huge-apps
@@ -30,6 +31,7 @@ class RouterMap extends React.Component {
                     <Route path='/User' component={User}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
+                    <Route path='/brand/:id' component={Brand}/>
                     <Route path='/message/main' component={Message}/>
                     <Route path='/message/main/:name' component={MessageType}/>
                     <Route path='/cart' component={Cart}/>
