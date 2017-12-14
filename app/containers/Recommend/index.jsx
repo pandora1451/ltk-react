@@ -103,7 +103,7 @@ class Recommend extends React.Component {
         })
 
         const page = this.state.page
-        const result = getRecommendPageGoods(page)
+        const result = getRecommendPageGoods(page) 
         this.resultHandle(result)
 
         // 增加 page 技术
@@ -119,7 +119,6 @@ class Recommend extends React.Component {
         }).then(json => {
             const hasMore = json.hasMore
             const data = json.data
-            console.log(data);
             this.setState({
                 hasMore: hasMore,
                 // 注意，这里将最新获取的数据，拼接到原数据之后，使用 concat 函数
