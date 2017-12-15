@@ -13,7 +13,6 @@ class GoodsSwiper extends React.Component {
     }
     render() {
         const opt = {
-            auto: 5000,
             callback: function (index) {
                 // 更新当前轮播图的index
                 this.setState({index: index});
