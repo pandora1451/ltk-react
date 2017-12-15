@@ -30,4 +30,68 @@
 			font-size: 20/40rem;
 		}
 	}
+	.goods-list{
+		overflow: hidden;
+		.title{
+			padding: 0.5rem;
+			font-size: 28/40rem;
+			color: #333333;
+			.left{
+				margin-right: 5rem;
+				.iocn-brand{
+					vertical-align: middle;
+					display: inline-block;
+					width: 31/40rem;
+					height: 33/40rem;
+					background: url('../../static/images/icon/ico_red_goodss.png') no-repeat 50%;
+					background-size: 100%;
+					margin-right: 0.3rem;
+				}
+			}
+			.right{
+				float: right;
+				width: 5rem;
+				text-align: right;
+				.sign{
+					color: #cccccc;
+				}
+				.sign.active{
+					color: #333333;
+				}
+				.shuxian{
+					margin: 0 0.4rem;
+				}
+			}
+		}
+		.list{
+			overflow: hidden;
+			.item{
+				width: 45%;
+				float: left;
+				margin: 0.5rem 2.5%;
+				.goods-name{
+					height: 2rem;
+					line-height: 1rem;
+					font-size: 24/40rem;
+					color: #999999;
+				}
+				.img-box{
+					img{
+						width: 100%;
+					}
+				}
+				.price{
+					font-size: 24/40rem;
+					.price-now{
+						color: #FFB0B7;
+						float: left;
+					}
+					.price-market{
+						color: #D3D3D3;
+						float: right;
+					}
+				}
+			}
+		}
+	}
 }
