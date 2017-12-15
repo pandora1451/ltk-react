@@ -15,7 +15,7 @@ class CommentList extends React.Component {
         const data = this.props.data
 
         return (
-            <div className="comment-list">
+            <div className="imooc-comment-list">
                 {data.map((item, index) => {
                     return <Item key={index} data={item}/>
                 })}

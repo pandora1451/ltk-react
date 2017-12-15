@@ -51,4 +51,60 @@
 			width: 100%;
 		}
 	}
+	.comment-container{
+		padding: 0.5rem;
+		overflow: hidden;
+		height:8.5rem;
+		overflow-y: hidden;
+		margin-bottom: 100/40rem;
+		.big-box{
+			width: 100%;
+			overflow-x: scroll;
+		}
+		.title{
+			font-size: 28/40rem;
+			color: #333333;
+			text-align: right;
+			margin: 10px 0;
+			.sign{
+				float: left;
+				color: #FFB0B7;
+			}
+			.num{
+				color: #FFB0B7;
+			}
+		}
+		.comment-list{
+			width: 380*4/40rem;
+			height: 280/40rem;
+			font-size: 26/40rem;
+			color: #666666;
+			.comment{
+				display: inline-block;
+				width: 380/40rem;
+				height: 220/40rem;
+				border: 1px solid #e6e6e6;
+				border-radius: 5px;
+				position: relative;
+				padding: 4px;
+				margin: 0 4px;
+				.content{
+
+				}
+				.user{
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					left: 4px;
+					color: #cccccc;
+					img{
+						vertical-align: middle;
+						width: 50/40rem;
+						height: 50/40rem;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
 }
