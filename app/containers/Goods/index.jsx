@@ -4,11 +4,15 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import GoodsHeader from './subpage/goods-header'
 import GoodsSwiper from './subpage/goods-swiper'
 import GoodsFooter from './subpage/goods-footer'
+import GoodsProperty from './subpage/goods-property'
 import './style.less'
 class Goods extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+        	propsShow:false
+        }
     }
     render() {
         return (
@@ -73,9 +77,18 @@ class Goods extends React.Component {
 	            		</div>
 	            	</div>
         		</div>
-            	<GoodsFooter></GoodsFooter>
+            	<GoodsFooter showP={this.showProp.bind(this)} ></GoodsFooter>
+            	<GoodsProperty hideP={this.hideProp.bind(this)} propsShow2={this.state.propsShow} ></GoodsProperty>
         	</section>
         )
+    }
+    showProp(){
+    	this.setState({propsShow:true})
+    	console.log(1);
+    }
+    hideProp(){
+    	this.setState({propsShow:false})
+    	console.log(2);
     }
 }
 
