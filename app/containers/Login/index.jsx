@@ -26,7 +26,7 @@ class Login extends React.Component {
     render() {
         return (
             <section className="login-page-container" style={{height:this.state.theHeight}}>
-                <HeaderZero title="登录/注册"></HeaderZero>
+                <HeaderZero title="登录/注册" backRouter="/"></HeaderZero>
                 {/*<Header title="登录"/>*/}
                     {
                         this.state.todo == 'login'
@@ -41,7 +41,7 @@ class Login extends React.Component {
                     }
                     {
                         this.state.todo == 'login'
-                        ?<LoginBox></LoginBox>
+                        ?<LoginBox loginHandle={this.loginHandle.bind(this)}></LoginBox>
                         :<RegisterBox getCode={this.timeCount.bind(this)} time={this.state.time}></RegisterBox>
                     }
                     <div className="wx-login">
@@ -51,12 +51,10 @@ class Login extends React.Component {
                         </div>
                     </div>
                     <div className="xieyi">
-                            <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
+                        <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
                     </div>
                 
-
-                
-                   {/* this.state.checking
+                   {/*this.state.checking
                     ? <div> 等待中</div>
                     : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>*/}
                 
@@ -100,10 +98,6 @@ class Login extends React.Component {
     componentDidMount() {
         // 判断是否已经登录
         this.doCheck()
-        /*this.setState({
-            theHeight:document.documentElement.clientHeight
-        })*/
-        /*container.currentStyle.height = document.documentElement.clientHeight;*/
     }
     doCheck() {
         const userinfo = this.props.userinfo

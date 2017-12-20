@@ -31,7 +31,7 @@ class PageFooter extends React.Component {
 	            	</Link>
 	            </div>
             	<div className="tabContainer">
-            		<Link to="/Login" activeClassName="active">
+            		<Link to="/User" activeClassName="active">
                         <span className="img-box user"></span>
 	            		<div><span>我的</span></div>
                     </Link>
