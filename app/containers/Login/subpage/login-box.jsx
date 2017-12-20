@@ -17,6 +17,13 @@ class LoginBox extends React.Component {
             	<div className="code">
             		<i className="ico-code"></i><input placeholder="请输入密码(6-20位数字、英文组成)" />
             	</div>
+                <div className="login-btn-box">
+                    <div className="login-btn">登录</div>
+                    <div className="login-bottom">
+                        <span className="left">忘记手机号?</span>
+                        <span className="right">忘记密码?</span>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -30,6 +30,9 @@ class RegisterBox extends React.Component {
             			:<span className="wait-code">重新获取({this.props.time}s)</span>
             		}
             	</div>
+            	<div className="register-btn-box">
+            		<div className="register-btn">注册</div>
+            	</div>
             </div>
         )
     }

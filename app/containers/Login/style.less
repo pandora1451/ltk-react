@@ -1,4 +1,7 @@
 .login-page-container{
+	div{
+		background-color: transparent;
+	}
 	width: 100%;
 	height: 100%;
 	background: url('../../static/images/icon/login_bg.png') no-repeat 50%;
@@ -8,7 +11,7 @@
 		text-align: center;
 		.login-btn{
 			position: relative;
-			margin: 0.2rem 0.5rem;
+			margin: 0.2rem 0.8rem;
 			font-size: 40/40rem;
 			color: #999999;
 		}
@@ -19,7 +22,7 @@
 		}
 		.register-btn{
 			position: relative;
-			margin: 0.2rem 0.5rem;
+			margin: 0.2rem 0.8rem;
 			font-size: 40/40rem;
 			color: #999999;
 		}
@@ -39,12 +42,16 @@
 		}
 	}
 	.wx-login{
+		position: absolute;
+		bottom: 5.4rem;
+		left: 0;
+		width: 100%;
 		text-align: center;
-		background-color: transparent;
 		.title{
 			font-size: 24/40rem;
 			color: #666666;
 			.gray-line{
+				background-color: transparent;
 				display: inline-block;
 				background-color: #cccccc;
 				height: 1px;
@@ -67,9 +74,13 @@
 		}
 	}
 	.xieyi{
-		margin: 50/40rem 0;
 		font-size: 24/40rem;
 		text-align: center;
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		width:16rem;
+		margin-left: -8rem;
 		background-color: transparent;
 		.left{
 			color: #333333;

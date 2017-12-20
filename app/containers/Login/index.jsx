@@ -25,36 +25,35 @@ class Login extends React.Component {
     }
     render() {
         return (
-            <section style={{height:this.state.theHeight}} className="login-page-container">
+            <section className="login-page-container" style={{height:this.state.theHeight}}>
                 <HeaderZero title="登录/注册"></HeaderZero>
                 {/*<Header title="登录"/>*/}
-                {
-                    this.state.todo == 'login'
-                    ?<div className="change-nav">
-                        <span className="login-btn active" onClick={this.whattodo.bind(this,'login')}>登录</span>
-                        <span className="register-btn" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                    {
+                        this.state.todo == 'login'
+                        ?<div className="change-nav">
+                            <span className="login-btn active" onClick={this.whattodo.bind(this,'login')}>登录</span>
+                            <span className="register-btn" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                        </div>
+                        :<div className="change-nav">
+                            <span className="login-btn" onClick={this.whattodo.bind(this,'login')}>登录</span>
+                            <span className="register-btn active" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                        </div>
+                    }
+                    {
+                        this.state.todo == 'login'
+                        ?<LoginBox></LoginBox>
+                        :<RegisterBox getCode={this.timeCount.bind(this)} time={this.state.time}></RegisterBox>
+                    }
+                    <div className="wx-login">
+                        <div className="title"><span className="gray-line"></span><span>第三方验证方式</span><span className="gray-line"></span></div>
+                        <div className="btn-box">
+                            <div className="btn-login" onClick={this.timeCount.bind(this)}>微信</div>
+                        </div>
                     </div>
-                    :<div className="change-nav">
-                        <span className="login-btn" onClick={this.whattodo.bind(this,'login')}>登录</span>
-                        <span className="register-btn active" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                    <div className="xieyi">
+                            <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
                     </div>
-                }
                 
-                {
-                    this.state.todo == 'login'
-                    ?<LoginBox></LoginBox>
-                    :<RegisterBox getCode={this.timeCount.bind(this)} time={this.state.time} ></RegisterBox>
-
-                }
-                <div className="wx-login">
-                    <div className="title"><span className="gray-line"></span><span>第三方验证方式</span><span className="gray-line"></span></div>
-                    <div className="btn-box">
-                        <div className="btn-login" onClick={this.timeCount.bind(this)}>微信</div>
-                    </div>
-                </div>
-                <div className="xieyi">
-                        <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
-                </div>
 
                 
                    {/* this.state.checking

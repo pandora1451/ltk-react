@@ -1,5 +1,6 @@
 .login-box-container,.register-box-container{
 	margin-top: 80/40rem;
+	min-height: 240/40rem;
 	text-align: center;
 	background-color: transparent;
 	input::-webkit-input-placeholder,
@@ -12,15 +13,27 @@
 		width: 13rem;
 		background-color: transparent;
 	}
-	>div{
+	>div.phone,>div.code,>div.code2,>div.code3{
 		height: 96/40rem;
 		line-height: 96/40rem;
+		position: relative;
 		background-color: transparent;
 		i{
 			vertical-align: middle;
 			margin-right: 0.4rem;
 		}
 	}
+	>div.phone:after,>div.code:after,>div.code2:after,>div.code3:after{
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		height: 1px;
+		width: 14.6rem;
+		margin-left: -7.3rem;
+		background-color: #e6e6e6;
+	}
+
 	.phone{
 		.ico-phone{
 			width: 31/40rem;
@@ -39,6 +52,7 @@
 			background-size: 100%;
 		}
 	}
+	
 	.ico-again{
 		width: 42/40rem;
 		height: 42/40rem;
@@ -53,6 +67,33 @@
 		background: url('../../../static/images/icon/login_code.png') no-repeat 50%;
 		background-size: 100%;
 	}
+	.login-btn-box{
+		margin-top: 1rem;
+		.login-btn{
+			width: 600/40rem;
+			height: 80/40rem;
+			line-height: 80/40rem;
+			background-color: #FFB0B7;
+			color: #ffffff;
+			margin: 0 auto;
+			border-radius: 1rem;
+		}
+		.login-bottom{
+			font-size: 24/40rem;
+			width: 15rem;
+			height: 2rem;
+			line-height: 2rem;
+			margin: 0 auto;
+			clear: both;
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+		}
+	}
+
 	.code3{
 		input{
 			width: 8rem;
@@ -78,6 +119,19 @@
 			height: 2rem;
 			line-height: 2rem;
 			vertical-align: middle;
+		}
+	}
+	.register-btn-box{
+		margin-top: 50/40rem;
+		.register-btn{
+			width: 600/40rem;
+			height: 80/40rem;
+			line-height: 80/40rem;
+			font-size: 38/40rem;
+			color: #ffffff;
+			background-color: #FFB0B7;
+			margin: 0 auto;
+			border-radius: 20px;
 		}
 	}
 }
