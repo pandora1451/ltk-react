@@ -7,32 +7,67 @@ import { hashHistory } from 'react-router'
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
 
 import Header from '../../components/Header'
+import HeaderZero from '../../components/HeaderZero'
 import LoginComponent from '../../components/Login'
-
+import RegisterBox from './subpage/register-box'
+import LoginBox from './subpage/login-box'
+import './style.less'
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            checking: true
+            checking: true,
+            todo:'register'
         }
     }
     render() {
         return (
-            <div>
-                <Header title="登录"/>
+            <section className="login-page-container">
+                <HeaderZero title="登录/注册"></HeaderZero>
+                {/*<Header title="登录"/>*/}
+                <div className="change-nav">
+                    <span className="login-btn" onClick={this.whattodo.bind(this,'login')}>登录</span>
+                    <span className="register-btn" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                </div>
+                {
+                    this.state.todo == 'login'
+                    ?<LoginBox></LoginBox>
+                    :<RegisterBox></RegisterBox>
+
+                }
+                <div className="wx-login">
+                    <div className="title"><span className="gray-line"></span><span>第三方验证方式</span><span className="gray-line"></span></div>
+                    <div className="btn-box">
+                        <div className="btn-login">微信</div>
+                    </div>
+                </div>
+                <div className="xieyi">
+                        <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
+                </div>
                 {
                     // 等待验证之后，再显示登录信息
                     this.state.checking
                     ? <div>{/* 等待中 */}</div>
                     : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
                 }
-            </div>
+            </section>
         )
     }
+
+    //wangw
+    //切换页面状态
+    whattodo(num){
+        this.setState({
+            todo:num
+        })
+    }
+
+    //下面是imooc
     componentDidMount() {
         // 判断是否已经登录
         this.doCheck()
+
     }
     doCheck() {
         const userinfo = this.props.userinfo
