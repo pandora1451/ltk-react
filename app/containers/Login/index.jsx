@@ -18,39 +18,49 @@ class Login extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
             checking: true,
-            todo:'register'
+            todo:'login',
+            time:0,
+            theHeight:document.documentElement.clientHeight
         }
     }
     render() {
         return (
-            <section className="login-page-container">
+            <section style={{height:this.state.theHeight}} className="login-page-container">
                 <HeaderZero title="登录/注册"></HeaderZero>
                 {/*<Header title="登录"/>*/}
-                <div className="change-nav">
-                    <span className="login-btn" onClick={this.whattodo.bind(this,'login')}>登录</span>
-                    <span className="register-btn" onClick={this.whattodo.bind(this,'register')}>注册</span>
-                </div>
+                {
+                    this.state.todo == 'login'
+                    ?<div className="change-nav">
+                        <span className="login-btn active" onClick={this.whattodo.bind(this,'login')}>登录</span>
+                        <span className="register-btn" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                    </div>
+                    :<div className="change-nav">
+                        <span className="login-btn" onClick={this.whattodo.bind(this,'login')}>登录</span>
+                        <span className="register-btn active" onClick={this.whattodo.bind(this,'register')}>注册</span>
+                    </div>
+                }
+                
                 {
                     this.state.todo == 'login'
                     ?<LoginBox></LoginBox>
-                    :<RegisterBox></RegisterBox>
+                    :<RegisterBox getCode={this.timeCount.bind(this)} time={this.state.time} ></RegisterBox>
 
                 }
                 <div className="wx-login">
                     <div className="title"><span className="gray-line"></span><span>第三方验证方式</span><span className="gray-line"></span></div>
                     <div className="btn-box">
-                        <div className="btn-login">微信</div>
+                        <div className="btn-login" onClick={this.timeCount.bind(this)}>微信</div>
                     </div>
                 </div>
                 <div className="xieyi">
                         <span className="left">验证并登录及同意</span><span className="right">《口红效应用户协议》</span>
                 </div>
-                {
-                    // 等待验证之后，再显示登录信息
-                    this.state.checking
-                    ? <div>{/* 等待中 */}</div>
-                    : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
-                }
+
+                
+                   {/* this.state.checking
+                    ? <div> 等待中</div>
+                    : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>*/}
+                
             </section>
         )
     }
@@ -62,12 +72,39 @@ class Login extends React.Component {
             todo:num
         })
     }
+    //倒计时
+    timeCount(){
+        this.setState({time:30})//30秒倒计时
+        var interval;
+        interval = setInterval(()=>{
+            this.timeLose(interval);
+        },1000)
+    }
 
+    timeLose(interval){
+        console.log(this.state.time);
+        if (this.state.time>0) {
+            var time = this.state.time;
+            time = time - 1;
+            this.setState({
+                time:time
+            })
+        }else{
+            interval = window.clearInterval(interval)
+        }
+        
+    }
+    timeLose1(){
+        console.log(2)
+    }
     //下面是imooc
     componentDidMount() {
         // 判断是否已经登录
         this.doCheck()
-
+        /*this.setState({
+            theHeight:document.documentElement.clientHeight
+        })*/
+        /*container.currentStyle.height = document.documentElement.clientHeight;*/
     }
     doCheck() {
         const userinfo = this.props.userinfo

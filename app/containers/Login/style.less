@@ -9,10 +9,25 @@
 		.login-btn{
 			position: relative;
 			margin: 0.2rem 0.5rem;
+			font-size: 40/40rem;
+			color: #999999;
+		}
+		.login-btn.active{
 			font-size: 48/40rem;
 			color: #333333;
+
 		}
-		.login-btn:after{
+		.register-btn{
+			position: relative;
+			margin: 0.2rem 0.5rem;
+			font-size: 40/40rem;
+			color: #999999;
+		}
+		.register-btn.active{
+			color: #333333;
+			font-size: 48/40rem;
+		}
+		.active:after{
 			content: '';
 			position: absolute;
 			left: 0;
@@ -21,11 +36,6 @@
 			height: 1px;
 			width: 80%;
 			margin: 0 10%;
-		}
-		.register-btn{
-			margin: 0.2rem 0.5rem;
-			font-size: 40/40rem;
-			color: #999999;
 		}
 	}
 	.wx-login{

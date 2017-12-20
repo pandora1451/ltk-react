@@ -6,6 +6,9 @@ class RegisterBox extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state ={
+        	isgetcode:true
+        }
     }
     render() {
         return (
@@ -21,7 +24,11 @@ class RegisterBox extends React.Component {
             	</div>
             	<div className="code3">
             		<i className="ico-yanzheng"></i><input placeholder="请输入验证码" />
-            		<span className="get-code">获取验证码</span>
+            		{
+            			this.props.time == 0
+            			?<span className="get-code" onClick={this.props.getCode}>获取验证码</span>
+            			:<span className="wait-code">重新获取({this.props.time}s)</span>
+            		}
             	</div>
             </div>
         )
