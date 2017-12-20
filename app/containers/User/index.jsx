@@ -7,6 +7,7 @@ import Header from '../../components/Header'
 import UserInfo from '../../components/UserInfo'
 import PageFooter from '../../components/PageFooter'
 import OrderList from './subpage/OrderList'
+import UserHeader from './subpage/userHeader'
 
 class User extends React.Component {
     constructor(props, context) {
@@ -17,7 +18,8 @@ class User extends React.Component {
         const userinfo = this.props.userinfo
         return (
             <div>
-                <Header title="用户主页" backRouter="/"/>
+                {/*<Header title="用户主页" backRouter="/"/>*/}
+                <UserHeader title="个人中心" backRouter="/"></UserHeader>
                 <UserInfo username={userinfo.username} city={userinfo.cityName}/>
                 <OrderList username={userinfo.username}/>
                 <PageFooter/>
@@ -25,8 +27,8 @@ class User extends React.Component {
         )
     }
     componentDidMount() {
-        // 如果未登录，跳转到登录页面
-        if (!this.props.userinfo.username) {
+        // 如果未登录，跳转到登录页面,If里面是否,改了记得改回来
+        if (this.props.userinfo.username) {
             hashHistory.push('/Login')
         }
     }
