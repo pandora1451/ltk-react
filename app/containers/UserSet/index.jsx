@@ -4,6 +4,7 @@ import HeaderZero from '../../components/HeaderZero'
 import HomeIcon from '../../components/HomeIcon'
 import MenuItem from '../../components/MenuItem'
 
+import Header from '../../components/Header'
 import './style.less'
 class UserSet extends React.Component {
     constructor(props, context) {
@@ -14,8 +15,8 @@ class UserSet extends React.Component {
         return (
         	<section className="user-set-page">
         	<HomeIcon/>
-        	<HeaderZero title="设置">
-        	</HeaderZero>
+        	<Header title="设置" ricon="home">
+        	</Header>
         	<div className="set-list-box">
         		<div className="list1">
         			<MenuItem name="个人资料" ico="" num="" link="/user/info"/>

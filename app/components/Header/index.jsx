@@ -4,18 +4,22 @@ import { hashHistory } from 'react-router'
 
 import './style.less'
 
-class Header extends React.Component {
+class HeaderShare extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            showtype:this.props.ricon
+        }
     }
     render() {
         return (
-            <div id="common-header">
-                <span className="back-icon" onClick={this.clickHandle.bind(this)}>
-                    <i className="icon-chevron-left"></i>
+            <div className="header-container">
+                <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                    <i className="back-icon" ></i>
                 </span>
-                <h1>{this.props.title}</h1>
+                <div className="title">{this.props.title}</div>
+                <div className="gray-line"></div>
             </div>
         )
     }
@@ -29,4 +33,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header
+export default HeaderShare
