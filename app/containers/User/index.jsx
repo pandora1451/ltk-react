@@ -8,7 +8,11 @@ import UserInfo from '../../components/UserInfo'
 import PageFooter from '../../components/PageFooter'
 import OrderList from './subpage/OrderList'
 import UserHeader from './subpage/userHeader'
+import UserBodyTop from './subpage/UserBodyTop'
+import UserBodyMid from './subpage/UserBodyMid'
+import UserBodyBottom from './subpage/UserBodyBottom'
 
+import './style.less'
 class User extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -17,13 +21,16 @@ class User extends React.Component {
     render() {
         const userinfo = this.props.userinfo
         return (
-            <div>
+            <section className="user-page-container">
                 {/*<Header title="用户主页" backRouter="/"/>*/}
                 <UserHeader title="个人中心" backRouter="/"></UserHeader>
-                <UserInfo username={userinfo.username} city={userinfo.cityName}/>
-                <OrderList username={userinfo.username}/>
+                {/*<UserInfo username={userinfo.username} city={userinfo.cityName}/>
+                <OrderList username={userinfo.username}/>*/}
+                <UserBodyTop></UserBodyTop>
+                <UserBodyMid></UserBodyMid>
+                <UserBodyBottom></UserBodyBottom>
                 <PageFooter/>
-            </div>
+            </section>
         )
     }
     componentDidMount() {
