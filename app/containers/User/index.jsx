@@ -12,6 +12,7 @@ import UserBodyTop from './subpage/UserBodyTop'
 import UserBodyMid from './subpage/UserBodyMid'
 import UserBodyBottom from './subpage/UserBodyBottom'
 
+
 import './style.less'
 class User extends React.Component {
     constructor(props, context) {

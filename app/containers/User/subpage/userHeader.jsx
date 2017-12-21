@@ -28,12 +28,7 @@ class UserHeader extends React.Component {
         )
     }
      clickHandle() {
-        const backRouter = this.props.backRouter
-        if (backRouter) {
-            hashHistory.push(backRouter)
-        } else {
-            window.history.back()
-        }
+            hashHistory.push('/user/set')
     }
 }
 

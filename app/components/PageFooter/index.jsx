@@ -19,19 +19,19 @@ class PageFooter extends React.Component {
                     </IndexLink>
             	</div>
             	<div className="tabContainer">
-            		<Link to="/Category" activeClassName="active">
+            		<Link to="/category" activeClassName="active">
                         <span className="img-box category"></span>
 	            		<div><span>分类</span></div>
             		</Link>
             	</div>
             	<div className="tabContainer">
-	            	<Link to="/Cart" activeClassName="active">
+	            	<Link to="/cart" activeClassName="active">
                         <span className="img-box cart"></span>
 	            		<div><span>购物车</span></div>
 	            	</Link>
 	            </div>
             	<div className="tabContainer">
-            		<Link to="/User" activeClassName="active">
+            		<Link to="/user" activeClassName="active">
                         <span className="img-box user"></span>
 	            		<div><span>我的</span></div>
                     </Link>
