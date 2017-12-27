@@ -1,7 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import HeaderZero from '../../components/HeaderZero'
-import HomeIcon from '../../components/HomeIcon'
 import MenuItem from '../../components/MenuItem'
 
 import Header from '../../components/Header'
@@ -14,8 +13,7 @@ class UserSet extends React.Component {
     render() {
         return (
         	<section className="user-set-page">
-        	<HomeIcon/>
-        	<Header title="设置" ricon="home">
+        	<Header title="设置" type="backAndHome">
         	</Header>
         	<div className="set-list-box">
         		<div className="list1">

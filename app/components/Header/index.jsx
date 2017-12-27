@@ -1,25 +1,93 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { hashHistory } from 'react-router'
+import {Link, hashHistory } from 'react-router'
 
+import ShareIcon from '../ShareIcon'
+import HomeIcon from '../HomeIcon'
 import './style.less'
 
-class HeaderShare extends React.Component {
+class Header extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            showtype:this.props.ricon
         }
+    }
+    headerContent(){
+        let type = this.props.type;
+        let showtype = "";
+        switch(type){
+            case 'backAndShare'://后退分享
+            return(
+                <div>
+                    <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <ShareIcon></ShareIcon>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
+            case 'msgHeader'://消息页面头部
+            return(
+                <div>
+                     <span className="back-icon-container " onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <span className="share-icon-container">
+                        标为已读
+                    </span>
+                    <div className="title">消息</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
+            case 'setAndMessage'://个人中心头部，设置和消息
+            return(
+                <div className="user-header-container">
+                    <div className="right">
+                        <Link to='/message/main'>
+                            <div className="message-box">
+                                <img src={require('../../static/images/icon/message01.png')}/>
+                            </div>
+                        </Link>
+                    </div>
+                    <span className="icon-setthing-container clear-fix" onClick={this.clickSetHandle.bind(this)}>
+                        <i className="icon-setthing" ></i>
+                    </span>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
+            case 'backAndHome'://设置头部，返回和回首页
+            return(
+                <div className="user-header-container">
+                    <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <HomeIcon></HomeIcon>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
+            default ://只有后退
+            return(
+                <div>
+                    <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            )
+        };
+        
     }
     render() {
         return (
             <div className="header-container">
-                <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
-                    <i className="back-icon" ></i>
-                </span>
-                <div className="title">{this.props.title}</div>
-                <div className="gray-line"></div>
+            {
+                this.headerContent()
+            }
             </div>
         )
     }
@@ -31,6 +99,9 @@ class HeaderShare extends React.Component {
             window.history.back()
         }
     }
+    clickSetHandle(){
+         hashHistory.push('/user/set');
+    }
 }
 
-export default HeaderShare
+export default Header

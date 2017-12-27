@@ -2,6 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {Link,hashHistory } from 'react-router'
 
+import Header from '../../components/Header'
 import './style.less'
 class Message extends React.Component {
     constructor(props, context) {
@@ -11,7 +12,7 @@ class Message extends React.Component {
     render() {
         return (
         	<section className="message-container">
-	        	<div className="header">
+	        	{/*<div className="header">
 	                <span className="back-icon-container " onClick={this.clickHandle.bind(this)}>
 	                    <i className="back-icon" ></i>
 	                </span>
@@ -20,7 +21,8 @@ class Message extends React.Component {
 	                </span>
 	                <div className="title">消息</div>
 	                <div className="gray-line"></div>
-	            </div>
+	            </div>*/}
+	            <Header title = "消息" type = "msgHeader"></Header>
 	            <div className="body-top">
 	            	<Link to="/message/main/sys">
 		            	<div>

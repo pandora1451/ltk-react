@@ -2,7 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { getRecommendPageGoods } from '../../fetch/column/column'
 
-import HeaderShare from '../../components/HeaderShare'
+import Header from '../../components/Header'
 import LoadMore from '../../components/LoadMore'
 import GoodsBox from '../../components/GoodsBox'
 import './style.less'
@@ -36,7 +36,7 @@ class Column extends React.Component {
     	}
         return (
         	<section className="column-container">
-        		<HeaderShare title={t}></HeaderShare>
+                <Header title = {t} type = "backAndShare"></Header>
         		<div className="banner-box">
         			<img src={require('../../static/images/banner/banner-xinpin.png')}/>
         		</div>

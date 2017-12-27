@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import HeaderZero from '../../components/HeaderZero'
+import Header from '../../components/Header'
 
 import './style.less'
 class MessageType extends React.Component {
@@ -38,7 +38,7 @@ class MessageType extends React.Component {
     	}
         return (
         	<section>
-	        	<HeaderZero title={t}></HeaderZero>
+	        	<Header title={t}></Header>
 	            <div className="message-list-container">
 	            	<ul>
 	            		<li>
