@@ -24,7 +24,6 @@ class User extends React.Component {
         return (
             <section className="user-page-container">
                 <Header title="用户主页" backRouter="/" type = "setAndMessage"/>
-                {/*<UserHeader title="个人中心" backRouter="/"></UserHeader>*/}
                 {/*<UserInfo username={userinfo.username} city={userinfo.cityName}/>
                 <OrderList username={userinfo.username}/>*/}
                 <UserBodyTop></UserBodyTop>

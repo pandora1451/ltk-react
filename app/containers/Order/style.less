@@ -1,0 +1,38 @@
+.order-page-container{
+	margin-top: 100/40rem;
+	background-color: #f1f1f1;
+	.theGrayDiv{
+		height: 1px;
+		width: 100%;
+	}
+	.nav-box{
+		display: flex;
+		justify-content: space-around;
+		font-size: 28/40rem;
+		text-align: center;
+		height: 66/40rem;
+		line-height: 66/40rem;
+		>a{
+			position: relative;
+		}
+		.items{
+			color: #999999;
+		}
+		.active{
+			.items{
+				color: #F02B2B;
+			}
+		}
+		.active:after{
+			content: "";
+			height: 1px;
+			width: 30px;
+			display: inline-block;
+			background-color: #F02B2B;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			margin-left: -15px;
+		}
+	}
+}
