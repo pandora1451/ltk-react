@@ -24,7 +24,7 @@ class MenuItem extends React.Component {
 					:''
 				}
 				<div className="right-box">
-					<span className="num">{this.props.num?this.props.num:''}</span>
+					<span className="num" style={this.props.fontColor?{color: this.props.fontColor}:null}>{this.props.num?this.props.num:''}</span>
 				{	
 					!this.state.infoshow
 					?<i className="ico-right"></i>

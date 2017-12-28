@@ -25,7 +25,7 @@ class Order extends React.Component {
 	            	<Link to='/order/dsh' activeClassName="active">
 	            	<div className="items">待收货</div>
 	            	</Link>
-	            	<Link to='/order/swc' activeClassName="active">
+	            	<Link to='/order/ywc' activeClassName="active">
 	            	<div className="items">已完成</div>
 	            	</Link>
 	            	<Link to='/order/yqx' activeClassName="active">
