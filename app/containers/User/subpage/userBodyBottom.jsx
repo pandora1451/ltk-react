@@ -15,7 +15,7 @@ class UserBodyBottom extends React.Component {
         	<div className="user-bottom-container">
 				<div className="list-top">
 					<MenuItem name="新人专享" ico="ico_mine_new" num=""/>
-					<MenuItem name="我的奖励" ico="ico_mine_reward" num=""/>
+					<MenuItem name="我的奖励" ico="ico_mine_reward" num="" link="/reward"/>
 					<MenuItem name="伙伴列表" ico="ico_mine_friends" num="10"/>
 				</div>
 				<div className="list-bottom">

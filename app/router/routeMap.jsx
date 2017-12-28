@@ -12,6 +12,7 @@ import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import Message from '../containers/Message'
 import MessageType from '../containers/MessageType'
+import Reward from '../containers/Reward'
 import Cart from '../containers/Cart'
 import Category from '../containers/Category'
 import Recommend from '../containers/Recommend'
@@ -43,6 +44,7 @@ class RouterMap extends React.Component {
                     <Route path='/order/:type' component={Order}/>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/recommend' component={Recommend}/>
+                    <Route path='/reward' component={Reward}/>
                     <Route path='/category' component={Category}/>
                     <Route path='/column/:name' component={Column}/>
                     <Route path='*' component={NotFound}/>

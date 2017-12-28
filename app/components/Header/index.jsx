@@ -28,6 +28,19 @@ class Header extends React.Component {
                     <div className="gray-line"></div>
                 </div>
             );
+            case 'backAndPoints'://后退三个点
+            return(
+                <div>
+                    <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <span className="ico-points-container">
+                        <i className="ico-points"></i>
+                    </span>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
             case 'msgHeader'://消息页面头部
             return(
                 <div>
