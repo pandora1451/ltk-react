@@ -1,4 +1,5 @@
 .reward-page-container{
+	background-color: #f1f1f1;
 	margin-top: 100/40rem;
 	.btn-box{
 		color: #333333;
@@ -31,6 +32,154 @@
 			position: absolute;
 			right: 10px;
 			font-size: 24/40rem;
+		}
+	}
+	.fans-box{
+		padding: 0 0.5rem;
+		margin-top: 20/40rem;
+		.fans-item{
+			height: 135/40rem;
+			line-height: 135/40rem;
+			text-align: center;
+			clear: both;
+			position: relative;
+			.left{
+				float: left;
+				.level{
+					font-size: 28/40rem;
+					color: #333333;
+					margin-left: 0.5rem;
+				}
+				img{
+					width: 70/40rem;
+					height: 70/40rem;
+					vertical-align: middle;
+				}
+			}
+			.right{
+				float: right;
+				font-size: 24/40rem;
+				color: #cccccc;
+				i{
+					display: inline-block;
+					width: 13/40rem;
+					height: 26/40rem;
+					background: url('../../static/images/icon/ico_mine_arrow.png') no-repeat 50%;
+					background-size: 100%;
+					vertical-align: text-bottom;
+					margin-left: 0.5rem;
+				}
+			}
+			.middle{
+				margin:0 6rem;
+			}
+		}
+		.fans-item:after{
+			content: '';
+			height: 1px;
+			width: 100%;
+			background-color: #f1f1f1;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			z-index: 0;
+
+		}
+	}
+	.pop-container{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.2);
+		.pop-box{
+			margin: 280/40rem auto 0 auto;
+			width: 576/40rem;
+			height: 408/40rem;
+			img{
+				width: 100%;
+			}
+			.top{
+				height: 123/40rem;
+				line-height: 83/40rem;
+				font-size: 28/40rem;
+				clear: both;
+				padding:0.5rem;
+				position: relative;
+				img{
+					width: 70/40rem;
+					height: 70/40rem;
+					vertical-align: middle;
+				}
+				.userId{
+					color: #999999;
+				}
+				.userName{
+					margin: 0 0.4rem;
+				}
+				.num{
+					width: 50/40rem;
+					height: 50/40rem;
+					line-height: 50/40rem;
+					background-color: #FFB0B7;
+					color: #ffffff;
+					display: inline-block;
+					border-radius: 25/40rem;
+					text-align: center;
+					float: right;
+					margin-top: 0.5rem;
+				}
+			}
+			.top:after{
+				content: '';
+				position: absolute;
+				height: 1px;
+				background-color: #f1f1f1;
+				width: 94%;
+				left: 50%;
+				bottom: 0;
+				margin-left: -47%;
+
+			}
+			.middle{
+				height: 220/40rem;
+				padding: 0.5rem;
+				img{
+					width: 200/40rem;
+					height: 200/40rem;
+					float: left;
+				}
+				.right{
+					margin-left: 220/40rem;
+					height: 160/40rem;
+					position: relative;
+					.goods-name{
+						font-size: 24/40rem;
+					}
+					.price-box{
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						font-size: 30/40rem;
+						.goods-price{
+							color: #FFB0B7;
+							margin-right: 0.5rem;
+						}
+						.goods-num{
+							font-size: 24/40rem;
+							color: #999999;
+						}
+					}
+				}
+			}
+			.bottom{
+				font-size: 24/40rem;
+				color: #333333;
+				margin-left: 0.5rem;
+				height: 60/40rem;
+				line-height: 60/40rem;
+			}
 		}
 	}
 }
