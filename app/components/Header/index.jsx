@@ -60,8 +60,8 @@ class Header extends React.Component {
                      <span className="back-icon-container " onClick={this.clickHandle.bind(this)}>
                         <i className="back-icon" ></i>
                     </span>
-                    <span className="edit-text-container">
-                        编辑
+                    <span className="edit-text-container" onClick={this.editClickHandle.bind(this)}>
+                        {this.props.rightText}
                     </span>
                     <div className="title">{this.props.title}</div>
                     <div className="gray-line"></div>
@@ -127,6 +127,9 @@ class Header extends React.Component {
     }
     clickSetHandle(){
          hashHistory.push('/user/set');
+    }
+    editClickHandle(){
+        this.props.editClick();
     }
 }
 

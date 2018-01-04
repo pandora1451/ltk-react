@@ -17,7 +17,7 @@ class Order extends React.Component {
     	let type = this.props.params.type;
         return (
         	<section className="order-page-container">
-        	<Header title="全部订单"></Header>
+        	<Header title="全部订单" backRouter="/user"></Header>
 	            <div className="nav-box">
 	            	<Link to='/order/dfk' activeClassName="active">
 	            	<div className="items">待付款</div>
