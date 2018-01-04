@@ -22,6 +22,7 @@ import UserCollection from '../containers/UserCollection'
 import Brand from '../containers/Brand'
 import Goods from '../containers/Goods'
 import Order from '../containers/Order'
+import Friends from '../containers/Friends'
 // 如果是大型项目，router部分就需要做更加复杂的配置
 // 参见 https://github.com/reactjs/react-router/tree/master/examples/huge-apps
 
@@ -49,6 +50,7 @@ class RouterMap extends React.Component {
                     <Route path='/reward' component={Reward}/>
                     <Route path='/category' component={Category}/>
                     <Route path='/column/:name' component={Column}/>
+                    <Route path='/friends' component={Friends}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

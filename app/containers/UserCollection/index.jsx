@@ -12,7 +12,8 @@ class UserCollection extends React.Component {
         this.state = {
         	showType:'list',//页面展示类型，是否是编辑
             rightText:'编辑',//头部右侧按钮
-            titleShow:'心愿单'//页面标题
+            titleShow:'心愿单',//页面标题
+            currentGood:null
         }
     }
     render() {

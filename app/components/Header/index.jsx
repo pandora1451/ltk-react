@@ -67,6 +67,19 @@ class Header extends React.Component {
                     <div className="gray-line"></div>
                 </div>
             );
+            case 'backAndRule'://返回和规则
+            return(
+                <div>
+                     <span className="back-icon-container " onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <span className="edit-text-container">
+                        规则
+                    </span>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
             case 'setAndMessage'://个人中心头部，设置和消息
             return(
                 <div className="user-header-container">
@@ -84,6 +97,7 @@ class Header extends React.Component {
                     <div className="gray-line"></div>
                 </div>
             );
+
             case 'backAndHome'://设置头部，返回和回首页
             return(
                 <div className="user-header-container">
