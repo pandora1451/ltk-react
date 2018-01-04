@@ -18,6 +18,7 @@ import Category from '../containers/Category'
 import Recommend from '../containers/Recommend'
 import NotFound from '../containers/404'
 import Column from '../containers/Column'
+import UserCollection from '../containers/UserCollection'
 import Brand from '../containers/Brand'
 import Goods from '../containers/Goods'
 import Order from '../containers/Order'
@@ -35,6 +36,7 @@ class RouterMap extends React.Component {
                     <Route path='/user' component={User}/>
                     <Route path='/user/set' component={UserSet}/>
                     <Route path='/user/info' component={UserInfo}/>
+                    <Route path='/user/collection' component={UserCollection}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/brand/:id' component={Brand}/>

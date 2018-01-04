@@ -22,7 +22,7 @@ class UserBodyBottom extends React.Component {
 					<MenuItem name="签到好礼" ico="ico_mine_sign" num=""/>
 					<MenuItem name="我的积分" ico="ico_mine_score" num="1234"/>
 					<MenuItem name="优惠券" ico="ico_mine_coupon" num=""/>
-					<MenuItem name="心愿单" ico="ico_mine_collection" num=""/>
+					<MenuItem name="心愿单" ico="ico_mine_collection" num="" link="/user/collection"/>
 				</div>
 				<div className="btn-box">
 					<div>联系客服</div>

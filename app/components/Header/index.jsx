@@ -54,6 +54,19 @@ class Header extends React.Component {
                     <div className="gray-line"></div>
                 </div>
             );
+            case 'backAndEdit'://返回和编辑
+            return(
+                <div>
+                     <span className="back-icon-container " onClick={this.clickHandle.bind(this)}>
+                        <i className="back-icon" ></i>
+                    </span>
+                    <span className="edit-text-container">
+                        编辑
+                    </span>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
             case 'setAndMessage'://个人中心头部，设置和消息
             return(
                 <div className="user-header-container">
