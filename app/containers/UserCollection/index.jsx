@@ -10,14 +10,15 @@ class UserCollection extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-        	showType:'list',
-            rightText:'编辑'
+        	showType:'list',//页面展示类型，是否是编辑
+            rightText:'编辑',//头部右侧按钮
+            titleShow:'心愿单'//页面标题
         }
     }
     render() {
         return (
         	<section className="user-collection-container">
-        	<Header title="心愿单" type="backAndEdit" rightText={this.state.rightText} editClick={this.clickHandler.bind(this)}/>
+        	<Header title={this.state.titleShow} type="backAndEdit" rightText={this.state.rightText} editClick={this.clickHandler.bind(this)}/>
         	<CollectItem popType={this.state.showType}/>
         	<CollectItem popType={this.state.showType}/>
             {
@@ -41,12 +42,13 @@ class UserCollection extends React.Component {
     }
     clickHandler(){
         this.state.showType=='list'
-        ?this.setState({showType:'edit'})
-        :this.setState({showType:'list'})
+        ?this.setState({showType:'edit',titleShow:'编辑'})
+        :this.setState({showType:'list',titleShow:'心愿单'})
 
         this.state.rightText == "编辑"
         ?this.setState({rightText:'完成'})
         :this.setState({rightText:'编辑'})
+
     }
 }
 
