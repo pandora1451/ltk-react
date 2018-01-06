@@ -82,7 +82,7 @@ class Header extends React.Component {
             );
             case 'setAndMessage'://个人中心头部，设置和消息
             return(
-                <div className="user-header-container">
+                <div className="">
                     <div className="right">
                         <Link to='/message/main'>
                             <div className="message-box">
@@ -97,14 +97,34 @@ class Header extends React.Component {
                     <div className="gray-line"></div>
                 </div>
             );
-
+            case 'msgAndEdit'://购物车，消息和编辑
+            return(
+                <div className="">
+                    <div className="right">
+                        <span className="edit-text">
+                            编辑
+                        </span>
+                    </div>
+                    <div className="left">
+                        <Link to='/message/main'>
+                            <div className="message-box">
+                                <img src={require('../../static/images/icon/message01.png')}/>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="title">{this.props.title}</div>
+                    <div className="gray-line"></div>
+                </div>
+            );
             case 'backAndHome'://设置头部，返回和回首页
             return(
                 <div className="user-header-container">
+                    <div className="right">
+                    <HomeIcon></HomeIcon>
+                    </div>
                     <span className="back-icon-container clear-fix" onClick={this.clickHandle.bind(this)}>
                         <i className="back-icon" ></i>
                     </span>
-                    <HomeIcon></HomeIcon>
                     <div className="title">{this.props.title}</div>
                     <div className="gray-line"></div>
                 </div>
@@ -142,7 +162,7 @@ class Header extends React.Component {
     clickSetHandle(){
          hashHistory.push('/user/set');
     }
-    editClickHandle(){
+    editClickHandle(){//收藏页点击编辑
         this.props.editClick();
     }
 }

@@ -37,7 +37,6 @@ class UserCollection extends React.Component {
                 </div>
                 :''
             }
-            
         	</section>
         )
     }
