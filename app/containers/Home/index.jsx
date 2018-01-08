@@ -33,7 +33,7 @@ class Home extends React.Component {
         return (
             <div className="app">
                 <HomeTop searchClick={msg =>this.searchHandle(msg)}/>
-                {/*<HomeHeader cityName={this.props.userinfo.cityName}/>*/}
+                <HomeHeader cityName={this.props.userinfo.cityName}/>
                 <AdSwiper/>
                 <SearchLayer searchShowState={this.state.searchShow} searchClick={msg =>this.searchHandle(msg)}/>
                 <NoticeBar/>

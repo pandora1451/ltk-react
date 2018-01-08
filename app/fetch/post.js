@@ -20,6 +20,7 @@ function obj2params(obj) {
 export function post(url, paramsObj) {
     var result = fetch(url, {
         method: 'POST',
+        mode: "no-cors",
         credentials: 'include',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -27,6 +28,5 @@ export function post(url, paramsObj) {
         },
         body: obj2params(paramsObj)
     });
-
     return result;
 }

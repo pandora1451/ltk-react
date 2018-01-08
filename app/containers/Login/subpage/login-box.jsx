@@ -1,5 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { login } from '../../../fetch/login/login'
 
 import './style.less'
 
@@ -8,7 +9,9 @@ class LoginBox extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            username: ''
+            username: 'lipstick13214',
+            password: 'iceman',
+            data:[]
         }
     }
     render() {
@@ -25,7 +28,7 @@ class LoginBox extends React.Component {
             		<i className="ico-code"></i><input placeholder="请输入密码(6-20位数字、英文组成)" />
             	</div>
                 <div className="login-btn-box">
-                    <div className="login-btn" onClick={this.clickHandle.bind(this)}>登录</div>
+                    <div className="login-btn" onClick={this.clickHandle1.bind(this)}>登录</div>
                     <div className="login-bottom">
                         <span className="left">忘记手机号?</span>
                         <span className="right">忘记密码?</span>
@@ -43,6 +46,29 @@ class LoginBox extends React.Component {
         const username = this.state.username
         const loginHandle = this.props.loginHandle
         loginHandle(username);
+    }
+    clickHandle1(){
+        var username = this.state.username;
+        var password = this.state.password;
+        var result = login(username,password);
+        this.resultHandle(result);
+    }
+    //处理登陆响应数据
+    resultHandle(result) {
+        console.log(result)
+        result.then(res => {
+            return res.json()
+        }).then(json => {
+            // 获取数据
+            console.log(1234);
+            this.setState({
+                data: json
+            })
+        }).catch(ex => {
+            if (__DEV__) {
+                console.error('用户主页“订单列表”获取数据报错, ', ex.message)
+            }
+        })
     }
 }
 

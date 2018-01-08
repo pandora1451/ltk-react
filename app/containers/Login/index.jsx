@@ -92,6 +92,7 @@ class Login extends React.Component {
     timeLose1(){
         console.log(2)
     }
+    
     //下面是imooc
     componentDidMount() {
         // 判断是否已经登录

@@ -35,7 +35,7 @@ class User extends React.Component {
     }
     componentDidMount() {
         // 如果未登录，跳转到登录页面,If里面是否,改了记得改回来
-        if (this.props.userinfo.username) {
+        if (!this.props.userinfo.username) {
             hashHistory.push('/Login')
         }
     }
