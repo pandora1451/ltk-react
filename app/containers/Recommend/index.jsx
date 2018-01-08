@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ReactSwipe from 'react-swipe'
 import { getRecommendPageGoods } from '../../fetch/column/column'
 
-import HeaderShare from '../../components/HeaderShare'
+import Header from '../../components/Header'
 import LoadMore from '../../components/LoadMore'
 import GoodsBox from '../../components/GoodsBox'
 import './style.less'
@@ -31,7 +31,7 @@ class Recommend extends React.Component {
         }
         return (
         	<section className="recommend-page" >
-        		<HeaderShare title="口红推荐"/>
+        		<Header title="口红推荐"/>
             	<section className="notice-container">
             		<span className="notice-icon"></span>
             		<span className="notice-content">推荐商品每天10点更新</span>

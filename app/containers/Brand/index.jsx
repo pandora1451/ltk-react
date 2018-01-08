@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import HeaderShare from '../../components/HeaderShare'
+import Header from '../../components/Header'
 
 import './style.less'
 class Brand extends React.Component {
@@ -11,7 +11,7 @@ class Brand extends React.Component {
     render() {
         return (
         	<section className="brand-page">
-				<HeaderShare title="品牌名"></HeaderShare>
+				<Header title="品牌名"></Header>
 				<div className="banner-box">
         			<img src={require('../../static/images/banner/brand-banner.png')}/>
         		</div>

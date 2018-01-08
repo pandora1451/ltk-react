@@ -4,6 +4,7 @@ import PageFooter from '../../components/PageFooter'
 import Header from '../../components/Header'
 
 import CartGoodsItem from './subpage/cartGoodsItem'
+import CartFooter from './subpage/cartFooter'
 import './style.less'
 class Cart extends React.Component {
     constructor(props, context) {
@@ -37,6 +38,7 @@ class Cart extends React.Component {
                         </div>
                     </div>
                 }
+                <CartFooter/>
                 <PageFooter/>
             </section>
         )

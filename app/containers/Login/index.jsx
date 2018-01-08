@@ -7,7 +7,6 @@ import { hashHistory } from 'react-router'
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
 
 import Header from '../../components/Header'
-import HeaderZero from '../../components/HeaderZero'
 import LoginComponent from '../../components/Login'
 import RegisterBox from './subpage/register-box'
 import LoginBox from './subpage/login-box'
@@ -26,8 +25,7 @@ class Login extends React.Component {
     render() {
         return (
             <section className="login-page-container" style={{height:this.state.theHeight}}>
-                <HeaderZero title="登录/注册" backRouter="/"></HeaderZero>
-                {/*<Header title="登录"/>*/}
+                <Header title="登录/注册" backRouter="/"></Header>
                     {
                         this.state.todo == 'login'
                         ?<div className="change-nav">

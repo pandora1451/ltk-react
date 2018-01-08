@@ -1,6 +1,5 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import HeaderZero from '../../components/HeaderZero'
 import MenuItem from '../../components/MenuItem'
 
 import Header from '../../components/Header'

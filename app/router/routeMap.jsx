@@ -8,6 +8,7 @@ import Login from '../containers/Login'
 import User from '../containers/User'
 import UserSet from '../containers/UserSet'
 import UserInfo from '../containers/UserInfo'
+import UserBonus from '../containers/UserBonus'
 import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import Message from '../containers/Message'
@@ -38,6 +39,7 @@ class RouterMap extends React.Component {
                     <Route path='/user/set' component={UserSet}/>
                     <Route path='/user/info' component={UserInfo}/>
                     <Route path='/user/collection' component={UserCollection}/>
+                    <Route path='/user/bonus' component={UserBonus}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/brand/:id' component={Brand}/>
