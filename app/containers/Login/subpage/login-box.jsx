@@ -58,7 +58,6 @@ class LoginBox extends React.Component {
             return res.json()
         }).then(json => {
             // 获取数据
-            console.log(2);
             this.setState({
                 data: json
             })
