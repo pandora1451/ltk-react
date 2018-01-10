@@ -75,10 +75,12 @@ class SearchList extends React.Component {
         this.setState({
             page: page + 1
         })
-
         result.then(res => {
+            console.log(1);
+            console.log(res)
             return res.json()
         }).then(json => {
+            console.log(3);
             const hasMore = json.hasMore
             const data = json.data
 

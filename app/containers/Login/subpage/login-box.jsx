@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { login } from '../../../fetch/login/login'
+import {getlogin,login } from '../../../fetch/login/login'
 
 import './style.less'
 
@@ -47,20 +47,18 @@ class LoginBox extends React.Component {
         const loginHandle = this.props.loginHandle
         loginHandle(username);
     }
+
     clickHandle1(){
         var username = this.state.username;
         var password = this.state.password;
         var result = login(username,password);
-        this.resultHandle(result);
-    }
     //处理登陆响应数据
-    resultHandle(result) {
-        console.log(result)
         result.then(res => {
+            console.log(res)
             return res.json()
         }).then(json => {
             // 获取数据
-            console.log(1234);
+            console.log(2);
             this.setState({
                 data: json
             })
@@ -71,5 +69,4 @@ class LoginBox extends React.Component {
         })
     }
 }
-
 export default LoginBox

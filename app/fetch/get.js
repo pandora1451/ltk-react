@@ -4,10 +4,11 @@ import 'es6-promise'
 export function get(url) {
   var result = fetch(url, {
       credentials: 'include',
+      mode: "no-cors",
       headers: {
-          'Accept': 'application/json, text/plain, */*'
+      	'Access-Control-Allow-Origin': '*',
+        'Accept': 'application/json, text/plain, */*'
       }
-  });
-
+  })
   return result;
 }
