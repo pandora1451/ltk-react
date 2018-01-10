@@ -54,7 +54,6 @@ class LoginBox extends React.Component {
         var result = login(username,password);
     //处理登陆响应数据
         result.then(res => {
-            console.log(res)
             return res.json()
         }).then(json => {
             // 获取数据
